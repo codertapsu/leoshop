@@ -17,7 +17,7 @@ class Rating extends Component{
             <div>
                 { total && [...Array(total).keys()].map((star, index) => (
                     <React.Fragment key={index}>
-                        <input name={name} value={index} type="checkbox" id={`${name}${index}`} onChange={(event)=>this.changeValue(event, name,index)}/>
+                        <input name={name} value={index} type="checkbox" id={`${name}${index}`} onChange={(e)=>this.changeValue(e, name,index)}/>
                         <label style={{margin: this.props.marginX}} htmlFor={`${name}${index}`}>
                             <StarIcon checked={false} width={15} />
                             </label>

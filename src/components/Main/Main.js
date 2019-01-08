@@ -5,8 +5,25 @@ import { mdiChevronRight } from '@mdi/js';
 import './Main.scss'
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import Rating from "../Rating/Rating";
+import FormatUnit from "../FormatUnit/FormatUnit";
+import {JustInputNumber} from "../../services/functions/JustInputNumber";
+import {FormatUnitValue} from "../../services/functions/FormatUnitValue";
 
 class Main extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            inputValueTest: '800'
+        }
+        this.changeValue = this.changeValue.bind(this)
+    }
+    changeValue(e){
+        if(!JustInputNumber(e.target.value)) return;
+        console.log(FormatUnitValue(e.target.value, 3, 2));
+        this.setState({
+            inputValueTest: e.target.value
+        })
+    }
 
     render() {
         return(
@@ -74,9 +91,9 @@ class Main extends Component{
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <div>
+                    <div className={'row'}>
+                        <div className={'col-md-3'}>
+                            <div className={'product-image'}>
                                 <img src={require('./Images/product1.jpg')} alt=""/>
                             </div>
                             <div>
@@ -84,6 +101,11 @@ class Main extends Component{
                                     <a href="" className={'text-capitalize'}>voluptate velit esse</a>
                                 </div>
                                 <Rating total={5} name={'test'} marginX={'2px'} />
+                                <div className="product-price">
+                                    <FormatUnit value={this.state.inputValueTest} unit={'USD'} size={15} borderInput={''} enableEdit={true} color={'#d5142f'} changeValue={(e) => this.changeValue(e)} />
+                                    {/*<span>100%</span>*/}
+
+                                </div>
                             </div>
                         </div>
                     </div>
