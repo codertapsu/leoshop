@@ -1,0 +1,59 @@
+@import '../../App';
+
+.flex-slider{
+  background-color: cadetblue;
+  float: right;
+  position: relative;
+
+  &:hover{
+    .flex-slider-direction{
+      opacity: 1;
+    }
+    .flex-slider-direction__right{
+      transform: translate(-30%, -50%);
+    }
+    .flex-slider-direction__left{
+      transform: translate(30%, -50%);
+    }
+  }
+
+  &__viewport{
+    overflow: hidden;
+    .list{
+      position: relative;
+    }
+    img.image-item{
+      object-fit: cover;
+      object-position: top center;
+    }
+    .li-test{
+      color: red;
+      position: absolute;
+      transition: 1s;
+    }
+  }
+
+  &-direction{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    background-color: #fafafa;
+    color: #d5142f;
+    border-radius: 50%;
+    padding: .5rem;
+    transition: all 500ms;
+
+    &:hover{
+      color: #ffffff;
+      background-color: #000000;
+    }
+  }
+  &-direction__left{
+    left: 0;
+    transform: translate(70%, -50%);
+  }
+  &-direction__right{
+    right: 0;
+    transform: translate(-70%, -50%);
+  }
+}

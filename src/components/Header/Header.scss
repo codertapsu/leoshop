@@ -1,0 +1,72 @@
+@import "../../App";
+
+header {
+  //position: fixed;
+  background-color: $main-color;
+  color: $text-color;
+  max-height: 100px;
+  font-size: $font-normal;
+
+
+  img.logo{
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+  }
+  form.form-search{
+    input[type=search]{
+      width: 300px;
+    }
+    input[type=submit]{
+      background-color: #000000;
+    }
+    .select-tag{
+      &__arrow{
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        color: inherit;
+        font-size: $font-icon;
+      }
+    }
+  }
+  .contact {
+    a{
+      color: inherit;
+    }
+
+    &__icon{
+      font-size: $font-icon;
+      transition: transform 1s;
+    }
+    &:hover{
+      .contact__icon{
+        transform: scaleX(-1);
+      }
+    }
+  }
+  .user {
+    font-size: $font-icon;
+    border-right: $line-color solid 1px;
+    border-left: $line-color solid 1px;
+    &__icon{
+      transition: transform 1s;
+    }
+    &:hover{
+      .user__icon{
+        transform: scaleX(-1);
+      }
+    }
+  }
+  .shoping-cart {
+    font-size: $font-icon;
+    &__icon{
+      transition: transform 1s;
+    }
+    &:hover{
+     .shoping-cart__icon{
+       transform: scaleX(-1);
+     }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "../../App";
+
+.banner-item {
+  background-color: transparent;
+  position: relative;
+
+  img{
+    object-fit: cover;
+    width: 100%;
+    object-position: top center;
+  }
+
+    .hover-effect{
+      background: rgba(255,255,255,0.7) none repeat scroll 0 0;
+      display: block;
+      height: 0;
+      opacity: .5;
+      position: absolute;
+      width: 0;
+      transition: all 1s;
+
+    }
+    .hover-effect-1{
+      top: 0;
+      left: 0;
+    }
+    .hover-effect-2{
+      top: 0;
+      right: 0;
+    }
+    .hover-effect-3{
+      top: auto;
+      right: 0;
+      bottom: 0;
+    }
+    .hover-effect-4{
+      top: auto;
+      left: 0;
+      bottom: 0;
+    }
+    &:hover{
+      .hover-effect{
+        height: 100%;
+        width: 100%;
+        opacity: .1;
+      }
+    }
+
+
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.banner-left {
+  .banner-content {
+    right: 10%;
+  }
+}
+.banner-right {
+  .banner-content {
+    left: 10%;
+  }
+}
+.font-13{
+  font-size: 1.3rem;
+}
+.color-smooth-black{
+  color: #888888;
+}
+.hover-pink:hover{
+  color: #f12a43;
+}
+.hover-black:hover{
+  color: #282828;
+}

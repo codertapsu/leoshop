@@ -1,0 +1,49 @@
+.dialog{
+  background-color: #00000061;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    transition: 500ms;
+    z-index: 1;
+
+    &:hover{
+      transform: rotate(180deg);
+    }
+  }
+
+  &-wrapper{
+    width: 50%;
+    max-width: 630px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+  }
+  &-content-right{
+    width: 100%;
+    height: 100%;
+  }
+  .subscribe-input{
+    border: .5px solid #cccccc;
+    border-radius: 5px;
+  }
+  .subscribe-button{
+    background-color: #d5142f;
+    border-radius: 5px;
+    outline: none;
+  }
+  .inValid {
+    border-color: #ff0000;
+  }
+}

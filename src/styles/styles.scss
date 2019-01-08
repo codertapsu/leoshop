@@ -1,0 +1,148 @@
+//@import "scss/fontawesome.scss";
+//@import "scss/solid.scss";
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+// Color
+$main-color: #d5142f;
+$line-color: #e5e5e5;
+$text-color: #ffffff;
+
+
+
+// Font
+$font-normal: 14px;
+$font-icon: 1rem;
+
+
+
+// Tag
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search] {
+  background-color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  height: 40px;
+  outline: none;
+}
+input[type=checkbox] {
+
+  &~svg {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #cccccc;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+
+  &~svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+
+  &~svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:hover~svg {
+    stroke: #d5142f;
+  }
+
+  &:checked~svg {
+    stroke: #d5142f;
+  }
+
+  &:checked~svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+
+  &:checked~svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+}
+select{
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-size: 30px auto;
+  -webkit-appearance: none;
+  //background: #ffffff url('../images/LeoShopLogo.png') no-repeat right center;
+  //background-size: 30px auto;
+  height: 40px;
+  padding: .25rem 1rem;
+}
+
+button, input[type=submit]{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: .25rem 2rem;
+  text-align: center;
+  margin: 0;
+  height: 40px;
+  line-height: 10px;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li{
+  list-style: none;
+}
+
+// Class
+.select-tag{
+  display: inline-block;
+  position: relative;
+  &::before{
+    border-left: 1px solid #e5e5e5;
+    content: "";
+    height: 25px;
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 8px;
+  }
+}
+
+.flip{
+  transition: transform 1s;
+  &:hover{
+    transform: scaleX(-1);
+  }
+}
+
+.outline-none{
+  outline: none;
+}
+.border-none{
+  border:none;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
