@@ -67,11 +67,34 @@
   font-size: 1.3rem;
 }
 .color-smooth-black{
-  color: #888888;
+  color: $link-color;
 }
 .hover-pink:hover{
-  color: #f12a43;
+  color: $primary-pink;
 }
 .hover-black:hover{
-  color: #282828;
+  color: $secondary-black;
+}
+.li-single{
+  width: 190px;
+}
+.banner-image{
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+.banner-subject-single{
+  a:hover{
+    text-transform: none;
+  }
+  .title-subject{
+    font-size: 39px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+  .subtitle-subject{
+    font-size: 25px;
+    font-weight: 400;
+    color: $primary-black;
+  }
 }

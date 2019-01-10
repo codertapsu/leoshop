@@ -1,0 +1,80 @@
+@import "../../App";
+
+.product-overview-wrapper{
+  background: transparent;
+  margin-bottom: 30px;
+}
+
+.product-box{
+  overflow: hidden;
+  height: 225px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    &:nth-child(1){
+      transition: all 1s;
+      opacity: 0;
+    }
+    &:nth-child(2){
+      transition: all 1s;
+      opacity: 1;
+    }
+  }
+  &:hover{
+    img:nth-child(1){
+      opacity: 1;
+    }
+    img:nth-child(2){
+      opacity: 0;
+    }
+    .product-action{
+      opacity: 1;
+      right: 5px;
+    }
+    .sale {
+      top: 5px;
+      left: 5px;
+      opacity: 1;
+    }
+  }
+}
+.product-action{
+  position: absolute;
+  right: -30px;
+  top: calc(50% - 30px);
+  opacity: 0;
+  transition: all 500ms;
+  div {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: $abort-color;
+    color: $primary-black;
+    border: medium none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+    transition: all 500ms;
+    &:hover{
+      background-color: $alert-color;
+      color: $primary-white;
+    }
+  }
+}
+.sale {
+  top: 5px;
+  left: -40px;
+  right: auto;
+  bottom: auto;
+  color: $primary-white;
+  font-size: 12px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 400ms ease-in-out;
+  background: $success-color;
+  padding: 2px 5px;
+}

@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .banner-top{
   height: 2rem;
 }
@@ -5,7 +8,7 @@
   width: 40px;
   height: 40px;
   position: fixed;
-  background-color: black;
+  background-color: #000000;
   color: #ffffff;
   top: auto;
   bottom: 1rem;
